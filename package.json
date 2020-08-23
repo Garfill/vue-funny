@@ -1,6 +1,6 @@
 {
   "name": "vue-funny",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Some Funny Components for Vue.js.",
   "main": "dist/vue-funny.umd.js",
   "scripts": {
