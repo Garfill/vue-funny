@@ -1,24 +1,15 @@
 # vue-funny
 
-## Project setup
+Some funny components for Vue.js.
+
+## Usage
 ```
-yarn install
+yarn add vue-funny
 ```
 
-### Compiles and hot-reloads for development
+## Import in your .js file
 ```
-yarn serve
-```
+import VueFunny from 'vue-funny'
 
-### Compiles and minifies for production
+Vue.use(VueFunny)
 ```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
