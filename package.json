@@ -2,7 +2,7 @@
   "name": "vue-funny",
   "version": "0.1.1",
   "description": "Some Funny Components for Vue.js.",
-  "main": "dist/vue-funny.umd.js",
+  "main": "dist/vue-funny.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve --mode development --open",
     "build": "vue-cli-service build",
