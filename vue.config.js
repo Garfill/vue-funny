@@ -1,7 +1,7 @@
 const mode = process.env.VUE_APP_MODE
 console.log(">>>>>>>>start at:")
-console.log(new Date())
-console.log(`running mode is ${mode}`)
+console.log(new Date().toLocaleString())
+console.log(`Running mode is: ${mode}`)
 
 let config = {}, configureWebpack = {}
 if (mode === 'development' || mode === 'example') {

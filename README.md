@@ -24,11 +24,27 @@ import { Aniplex } from 'vue-funny'
 Vue.use(Aniplex)
 ```
 
-### Aniplex
+### **FunnyAniplex**
 Aniplex-like rotation effect
 
-**Usage**
+#### Usage
 ```
-<vue-aniplex word="aniplex" />
+<funny-aniplex word="aniplex" />
 ```
 
+
+### **FunnyMark**
+The customized style underline with animation through your words.
+
+#### Usage
+```
+<funny-mark duration="1" color="red">
+  This is your mark word.
+</funny-mark>
+```
+
+Some props you can set into this component
+
+**duration**: The number of duration for the animation
+
+**color**: The color of underline

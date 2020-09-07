@@ -1,15 +1,15 @@
 <template>
   <div
-    class="aniplex-container"
+    class="funny-aniplex-container"
     v-if="wordList.length > 0"
   >
-    <div class="aniplex-char-container">
+    <div class="funny-aniplex-char-container">
       <span
         v-for="(word, index) in wordList"
-        :key="'aniplex-key-' + index"
+        :key="'funny-aniplex-key-' + index"
         :class="[calculateClass(index)]"
         :style="word.charStyle"
-        class="aniplex-char"
+        class="funny-aniplex-char"
       >
         {{ word.char }}
       </span>
@@ -26,7 +26,7 @@ const getAnimateDuration = (index, length) => {
   }
 }
 export default {
-  name: 'VueAniplex',
+  name: 'FunnyAniplex',
   props: {
     word: {
       type: String,
@@ -72,14 +72,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .aniplex-container {
+  .funny-aniplex-container {
     position: relative;
     margin: 50px auto;
-    .aniplex-char-container {
+    .funny-aniplex-char-container {
       white-space: nowrap;
       text-align: center;
     }
-    .aniplex-char {
+    .funny-aniplex-char {
       display: inline-block;
       position: relative;
       width: 60px;
@@ -120,13 +120,13 @@ export default {
       }
     }
 
-    .aniplex-border-container {
+    .funny-aniplex-border-container {
       position: absolute;
       top: 0;
       bottom: 0;
       white-space: nowrap;
     }
-    .aniplex-border {
+    .funny-aniplex-border {
       position: absolute;
       width: 60px;
       height: 60px;
