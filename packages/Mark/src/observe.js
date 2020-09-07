@@ -67,6 +67,7 @@ function showMark(element) {
 function removeEventListener(puid) {
   let parent = cache[puid].parent
   parent.removeEventListener('scroll', cache[puid].handle)
+  window.removeEventListener('scroll', cache[puid].handle)
   delete cache[puid]
 }
 

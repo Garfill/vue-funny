@@ -2866,6 +2866,7 @@ function showMark(element) {
 function removeEventListener(puid) {
   var parent = cache[puid].parent;
   parent.removeEventListener('scroll', cache[puid].handle);
+  window.removeEventListener('scroll', cache[puid].handle);
   delete cache[puid];
 }
 
