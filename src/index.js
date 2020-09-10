@@ -1,9 +1,11 @@
 import Aniplex from '../packages/Aniplex/index.js'
 import Mark from '../packages/Mark/index.js'
+import Verify from '../packages/Verify/index.js'
 
 const components = [
   Aniplex,
-  Mark
+  Mark,
+  Verify,
 ]
 
 const install = function(Vue) {
@@ -15,5 +17,6 @@ const install = function(Vue) {
 export default {
   install,
   Aniplex,
-  Mark
+  Mark,
+  Verify,
 }
