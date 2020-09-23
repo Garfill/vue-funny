@@ -5,19 +5,19 @@ let uid = 0;
 
 function observeFunc(target) {
   const scrollParent = getScrollParent(target);
-  if (!scrollParent.puid) {
+  if (!scrollParent.parent_id) {
     cache[++puid] = {
       parent: scrollParent,
       handle: null,
       children: []
     };
-    scrollParent.puid = puid
+    scrollParent.parent_id = puid
   }
   target.uid = ++uid;
   target.puid = puid;
 
   const wrappedHandle = debounce(function() {
-    _scrollHandle(scrollParent)
+    _scrollHandle(puid)
   }, 300)
 
   if (cache[puid].children.length == 0) {
