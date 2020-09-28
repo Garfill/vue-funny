@@ -1,4 +1,5 @@
 const mode = process.env.VUE_APP_MODE
+const env = process.env.NODE_ENV
 console.log(">>>>>>>>start at:")
 console.log(new Date().toLocaleString())
 console.log(`Running mode is: ${mode}`)
@@ -14,6 +15,11 @@ if (mode === 'development' || mode === 'example') {
       }
     },
     outputDir: 'dist-example'
+  };
+  configureWebpack = {
+    output: {
+      filename: '[name].build.js'
+    }
   }
 } else if (mode === 'libs') {
   config = {
@@ -22,13 +28,14 @@ if (mode === 'development' || mode === 'example') {
   configureWebpack = {
     output: {
       library: 'VueFunny',
-      libraryExport: 'default'
+      libraryExport: 'default',
     }
   }
 }
 
 module.exports = {
   ...config,
+  lintOnSave: env !== 'production',
   publicPath: '',
   productionSourceMap: false,
   css: {

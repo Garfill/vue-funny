@@ -8,7 +8,7 @@
     "serve": "vue-cli-service serve --mode development --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build:lib": "vue-cli-service build --target lib --name vue-funny --mode libs src/index.js",
+    "build:lib": "vue-cli-service build --target lib --name VueFunny --mode libs src/index.js",
     "build:example": "vue-cli-service build --mode example"
   },
   "repository": {
@@ -42,7 +42,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "no-debugger": 0
+    }
   },
   "browserslist": [
     "> 1%",
