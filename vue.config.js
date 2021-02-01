@@ -1,5 +1,6 @@
 const mode = process.env.VUE_APP_MODE
 const env = process.env.NODE_ENV
+
 console.log(">>>>>>>>start at:")
 console.log(new Date().toLocaleString())
 console.log(`Running mode is: ${mode}`)
