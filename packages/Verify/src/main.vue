@@ -19,7 +19,10 @@
         :style="confirmStyle"
       ></span>
     </div>
-    <div class="verify-swipe-box">
+    <div 
+      class="verify-swipe-box"
+      @mousemove="moveHanlde"
+    >
       <div class="verify-swipe-bar">
         <span :class="{'swipe-hidden': moveAble}">{{ swipeText }}</span>
       </div>
@@ -29,7 +32,6 @@
         :style="{'left': swiperLeft + 'px'}"
         @mousedown.left="downHandle"
         @mouseup="upHandle"
-        @mousemove="moveHanlde"
       ></span>
     </div>
   </div>
@@ -140,6 +142,7 @@ export default {
       if (Math.abs(this.swiperLeft - this.verifyLeft) <= this.offset) {
         this.$emit('success')
       } else {
+        this.swiperLeft = 0;
         this.$emit('fail')
       }
     }
