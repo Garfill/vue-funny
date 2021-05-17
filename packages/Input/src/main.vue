@@ -23,10 +23,10 @@
         class="funny-input-string"
         @click="changeType('input')"
       >
-        <div class="funny-input-strelm" v-if="displayValue">
+        <div class="funny-input-show" v-if="displayValue">
           {{ displayValue }}
         </div>
-        <div class="funny-input-holder" v-else>
+        <div class="funny-input-show" v-else>
           {{ placeholder }}
         </div>
       </div>
